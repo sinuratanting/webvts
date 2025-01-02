@@ -93,6 +93,7 @@
                             <a href="infocu.html" class="dropdown-item">Informasi Cuaca Harian</a>
                             <a href="tatacara.html" class="dropdown-item">Tata Cara Berlalu Lintas</a>
                             <a href="syarat.html" class="dropdown-item">Syarat Mendapatkan Layanan VTS</a>
+                            <a href="berita.html" class="dropdown-item">Berita</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -134,7 +135,7 @@
                     <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
                     <h5 class="card-title">SOP Bersama VTS-LPS_Mei 2022</h5>
                     <p class="card-text">Format: PDF</p>
-                    <a href="#" onclick="showFile('sop/SOP Bersama VTS-LPS_Mei 2022.pdf')" class="btn btn-danger mt-auto">View PDF</a>
+                    <a href="#" onclick="openFileInNewTab('sop/SOP Bersama VTS-LPS_Mei 2022.pdf')" class="btn btn-danger mt-auto">View PDF</a>
                 </div>
             </div>
         </div>
@@ -143,10 +144,10 @@
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column text-center">
-                    <i class="fas fa-file-excel fa-3x text-success mb-3"></i>
+                    <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
                     <h5 class="card-title">SOP Kapal dari Selatan TSS</h5>
-                    <p class="card-text">Format: Excel</p>
-                    <a href="#" onclick="showFile('sop/SOP Kapal dari Selatan TSS.xlsx')" class="btn btn-success mt-auto">View Excel</a>
+                    <p class="card-text">Format: PDF</p>
+                    <a href="#" onclick="openFileInNewTab('sop/SOP Kapal dari Selatan TSS.pdf')" class="btn btn-danger mt-auto">View PDF</a>
                 </div>
             </div>
         </div>
@@ -155,10 +156,10 @@
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column text-center">
-                    <i class="fas fa-file-excel fa-3x text-success mb-3"></i>
+                    <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
                     <h5 class="card-title">SOP Kapal dari Utara TSS</h5>
-                    <p class="card-text">Format: Excel</p>
-                    <a href="#" onclick="showFile('sop/SOP Kapal dari Utara TSS.xlsx')" class="btn btn-success mt-auto">View Excel</a>
+                    <p class="card-text">Format: PDF</p>
+                    <a href="#" onclick="openFileInNewTab('sop/SOP Kapal dari Utara TSS.pdf')" class="btn btn-danger mt-auto">View PDF</a>
                 </div>
             </div>
         </div>
@@ -167,10 +168,10 @@
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column text-center">
-                    <i class="fas fa-file-excel fa-3x text-success mb-3"></i>
+                    <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
                     <h5 class="card-title">SOP Kapal Tidak mengikuti Rute TSS</h5>
-                    <p class="card-text">Format: Excel</p>
-                    <a href="#" onclick="showFile('sop/SOP Kapal Tidak mengikuti Rute TSS.xlsx')" class="btn btn-success mt-auto">View Excel</a>
+                    <p class="card-text">Format: PDF</p>
+                    <a href="#" onclick="openFileInNewTab('sop/SOP Kapal Tidak mengikuti Rute TSS.pdf')" class="btn btn-danger mt-auto">View PDF</a>
                 </div>
             </div>
         </div>
@@ -179,10 +180,10 @@
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column text-center">
-                    <i class="fas fa-file-excel fa-3x text-success mb-3"></i>
+                    <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
                     <h5 class="card-title">SOP Kapal Trouble di TSS</h5>
-                    <p class="card-text">Format: Excel</p>
-                    <a href="#" onclick="showFile('sop/SOP Kapal Trouble di TSS.xlsx')" class="btn btn-success mt-auto">View Excel</a>
+                    <p class="card-text">Format: PDF</p>
+                    <a href="#" onclick="openFileInNewTab('sop/SOP Kapal Trouble diTSS.pdf')" class="btn btn-danger mt-auto">View PDF</a>
                 </div>
             </div>
         </div>
@@ -194,41 +195,22 @@
                     <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
                     <h5 class="card-title">SOP VTS MERAK 2022</h5>
                     <p class="card-text">Format: PDF</p>
-                    <a href="#" onclick="showFile('sop/SOP VTS MERAK 2022.pdf')" class="btn btn-danger mt-auto">View PDF</a>
+                    <a href="#" onclick="openFileInNewTab('sop/SOP VTS MERAK 2022.pdf')" class="btn btn-danger mt-auto">View PDF</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <hr style="margin: 30px 0; border: 1px solid #ccc;">
-
-    <div style="text-align: center;">
-        <p style="font-size: 18px; font-weight: bold;">Preview of Selected File:</p>
-    </div>
-
-    <!-- Iframe for displaying the selected file -->
-    <iframe id="fileViewer" style="width: 100%; height: 600px; display:none; border: none;" class="shadow"></iframe>
 </div>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script>
-    function showFile(filePath) {
-        const fileViewer = document.getElementById('fileViewer');
-        const fileType = filePath.split('.').pop().toLowerCase();
-        
-        // Set the iframe source based on the file type
-        if (fileType === 'pdf') {
-            fileViewer.src = filePath;
-            fileViewer.style.display = 'block'; // Show the iframe for PDF
-        } else if (fileType === 'xlsx') {
-            // Excel files cannot be displayed in an iframe, you can open them in a new tab
-            window.open(filePath, '_blank');
-        } else {
-            alert('Unsupported file type. Only PDF and Excel files can be displayed.');
-        }
-    }
+// Function to open the file in a new tab
+function openFileInNewTab(filePath) {
+    window.open(filePath, '_blank');
+}
 </script>
-<!-- SOP PDF Display End -->
+
+
+    
 
  <!-- Full Screen Search Start -->
  <div class="modal fade" id="searchModal" tabindex="-1">
@@ -270,6 +252,10 @@
                                 <i class="bi bi-telephone text-primary me-2"></i>
                                 <p class="mb-0">+62 821 1482 9973</p>
                             </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+62 8111 00 11183 (DisNav Tipe B Tanjung Priok)</p>
+                            </div>
                             <div class="d-flex mt-4">
                                 <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-youtube fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
@@ -296,6 +282,7 @@
                             <div class="link-animated d-flex flex-column justify-content-start">
                                 <a class="text-light mb-2" href="tatacara.html"><i class="bi bi-arrow-right text-primary me-2"></i>Tata Cara Berlalu Lintas</a>
                                 <a class="text-light mb-2" href="syarat.html"><i class="bi bi-arrow-right text-primary me-2"></i>Layananan VTS</a>
+                                <a class="text-light mb-2" href="berita.html"><i class="bi bi-arrow-right text-primary me-2"></i>Berita</a>
                                 <a class="text-light mb-2" href="pnbp.html"><i class="bi bi-arrow-right text-primary me-2"></i>PNP Rambu</a>
                                 <a class="text-light mb-2" href="sop.html"><i class="bi bi-arrow-right text-primary me-2"></i>SOP</a>
                                 <a class="text-light" href="produk.html"><i class="bi bi-arrow-right text-primary me-2"></i>Produk</a>

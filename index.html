@@ -93,6 +93,7 @@
                             <a href="infocu.html" class="dropdown-item">Informasi Cuaca Harian</a>
                             <a href="tatacara.html" class="dropdown-item">Tata Cara Berlalu Lintas</a>
                             <a href="syarat.html" class="dropdown-item">Syarat Mendapatkan Layanan VTS</a>
+                            <a href="berita.html" class="dropdown-item">Berita</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -148,66 +149,86 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br>
     <!-- Navbar & Carousel End -->
 
+        <!-- Berita Terkini Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <!-- Fullscreen Video Section -->
+                <div class="row justify-content-center mt-0">
+                    <!-- Video 1 -->
+                    <div class="col-12 mb-5">
+                        <h4 class="text-center text-primary font-weight-bold" 
+                        style="font-family: 'Playfair Display', serif; 
+                               text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); 
+                               line-height: 1.8; 
+                               letter-spacing: 0.5px; 
+                               padding: 10px; 
+                               background: linear-gradient(to right, #ffffff, #f0f8ff); 
+                               border-radius: 8px; 
+                               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        Indonesia mengukir sejarah baru dalam kancah maritim Internasional sebagai negara kepulauan (archipelagic state) pertama di dunia yang memiliki bagan pemisahan alur laut atau Traffic Separation Scheme (TSS)
+                    </h4>
+                    
 
-    <!-- Berita Terkini Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="section-title text-center position-relative pb-3 mb-5">
-                <h5 class="fw-bold text-primary text-uppercase">Berita Terkini</h5>
-                <h1 class="mb-0">Informasi Terbaru dari VTS Merak</h1>
-            </div>
-            <div id="news-container" class="row g-4">
-            <!-- Berita akan dimasukkan di sini -->
-            </div>
-        </div>
-    </div>
-    <!-- Berita Terkini End -->
-
-    <script>
-        // Contoh data berita yang bisa kamu dapatkan dari API atau secara manual
-        const beritaTerkini = [
-            {
-                title: "Pengumuman Jadwal Operasional Terbaru",
-                description: "VTS Merak mengumumkan perubahan jadwal operasional...",
-                date: "22 Oktober 2024",
-                link: "#"
-            },
-            {
-                title: "Perawatan Peralatan Navigasi",
-                description: "Dalam rangka meningkatkan keselamatan, peralatan navigasi di Merak sedang dilakukan perawatan...",
-                date: "20 Oktober 2024",
-                link: "#"
-            },
-            {
-                title: "Panduan Berlalu Lintas Laut",
-                description: "VTS Merak menyediakan panduan terbaru mengenai aturan berlalu lintas di perairan...",
-                date: "15 Oktober 2024",
-                link: "#"
-            }
-        ];
-
-        const newsContainer = document.getElementById("news-container");
-
-        beritaTerkini.forEach(berita => {
-            const newsItem = `
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="p-4">
-                            <h5 class="fw-bold">${berita.title}</h5>
-                            <small><i>${berita.date}</i></small>
-                            <p>${berita.description}</p>
-                            <a class="text-primary" href="${berita.link}">Baca Selengkapnya</a>
+                        
+                        <div class="video-container">
+                            <video class="video" controls>
+                                <source src="video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="col-12 mb-5">
+                        <h4 class="text-center text-dark"></h4>
+                        <div class="video-container">
+                            <video class="video" controls>
+                                <source src="video2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
-            `;
-            newsContainer.innerHTML += newsItem;
-        });
-    </script>
-
+            </div>
+        </div>
+        
+        <!-- Add this CSS to make the videos fill the screen -->
+        <style>
+            .video-container {
+                position: relative;
+                overflow: hidden;
+                padding-top: 56.25%; /* Aspect ratio 16:9 */
+                width: 100%;
+                height: 100vh; /* Make the container take the full viewport height */
+            }
+        
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the video covers the entire container */
+            }
+        
+            h4 {
+                margin-bottom: 20px; /* Adds some space below the title */
+                font-size: 1.5rem; /* Adjusts title size */
+                text-align: center;
+                color: #333; /* Dark text color */
+            }
+        
+            .row {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+            </div>
+        </div>
+        <!-- Berita Terkini End -->
+    
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -249,6 +270,10 @@
                                     <i class="bi bi-telephone text-primary me-2"></i>
                                     <p class="mb-0">+62 821 1482 9973</p>
                                 </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-telephone text-primary me-2"></i>
+                                    <p class="mb-0">+62 8111 00 11183 (DisNav Tipe B Tanjung Priok)</p>
+                                </div>
                                 <div class="d-flex mt-4">
                                     <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-youtube fw-normal"></i></a>
                                     <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
@@ -275,6 +300,7 @@
                                 <div class="link-animated d-flex flex-column justify-content-start">
                                     <a class="text-light mb-2" href="tatacara.html"><i class="bi bi-arrow-right text-primary me-2"></i>Tata Cara Berlalu Lintas</a>
                                     <a class="text-light mb-2" href="syarat.html"><i class="bi bi-arrow-right text-primary me-2"></i>Layananan VTS</a>
+                                    <a class="text-light mb-2" href="berita.html"><i class="bi bi-arrow-right text-primary me-2"></i>Berita</a>
                                     <a class="text-light mb-2" href="pnbp.html"><i class="bi bi-arrow-right text-primary me-2"></i>PNP Rambu</a>
                                     <a class="text-light mb-2" href="sop.html"><i class="bi bi-arrow-right text-primary me-2"></i>SOP</a>
                                     <a class="text-light" href="produk.html"><i class="bi bi-arrow-right text-primary me-2"></i>Produk</a>

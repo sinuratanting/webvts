@@ -93,6 +93,7 @@
                             <a href="infocu.html" class="dropdown-item">Informasi Cuaca Harian</a>
                             <a href="tatacara.html" class="dropdown-item">Tata Cara Berlalu Lintas</a>
                             <a href="syarat.html" class="dropdown-item">Syarat Mendapatkan Layanan VTS</a>
+                            <a href="berita.html" class="dropdown-item">Berita</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -156,89 +157,136 @@
                         <ul class="list-unstyled text-muted">
                             <li class="mb-2">
                                 <i class="bi bi-file-earmark-check text-primary"></i>
-                                <a href="https://drive.google.com/file/d/17qBznFzJpcovti9bXiWqHpkD8E6yqXCH/view?usp=drive_link" target="_blank" class="text-decoration-none text-muted">
+                                <a href="dasarhukum/uu-nomor--17-tahun-2008.pdf" onclick="openPdf()"> 
                                     <strong>UU No.17/2008</strong> - Pelayaran
                                 </a>
                             </li>
+
                             <li class="mb-2">
                                 <i class="bi bi-file-earmark-check text-primary"></i>
-                                <a href="path/to/PP_No_5_2010.pdf" target="_blank" class="text-decoration-none text-muted">
+                                <a href="dasarhukum/pp_no._5_tahun_2010.pdf" onclick="openPdf()">
                                     <strong>PP No.5/2010</strong> - Kenavigasian
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-file-earmark-check text-primary"></i>
-                                <a href="path/to/PM_No_04_2023.pdf" target="_blank" class="text-decoration-none text-muted">
+                                <a href="dasarhukum/PM 4 Tahun 2023 ttg Telkompel ok.pdf" onclick="openPdf()">
                                     <strong>PM No.04/2023</strong> - Telekomunikasi Pelayaran & Tata Kelola Lalulintas di Perairan Indonesia
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-file-earmark-check text-primary"></i>
-                                <a href="path/to/KM_No_130_2020.pdf" target="_blank" class="text-decoration-none text-muted">
+                                <a href="dasarhukum/KM 130-2020 Tata Cara Berlalulintas di Selat Sunda.pdf" onclick="openPdf()">
                                     <strong>KM No.130/2020</strong> - Tatacara Berlalulintas di Selat Sunda
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-file-earmark-check text-primary"></i>
-                                <a href="path/to/SOLAS_Convention_Chapter_V.pdf" target="_blank" class="text-decoration-none text-muted">
+                                <a href="dasarhukum/solas v on safety of navigation.pdf" onclick="openPdf()">
                                     <strong>SOLAS Convention Chapter V</strong> - Safety of Navigation, Reg. 12 - Vessel Traffic Services
                                 </a>
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-file-earmark-check text-primary"></i>
-                                <a href="path/to/IMO_Resolution_A1158.pdf" target="_blank" class="text-decoration-none text-muted">
+                                <a href="dasarhukum/IMO Resolution A.1158(32).pdf" onclick="openPdf()">
                                     <strong>IMO Resolution A.1158 (32)</strong> - Guidelines for Vessel Traffic Services
                                 </a>
                             </li>
+                            
+                            <!-- Modal or container for displaying the PDF -->
+                            <div id="pdfModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
+                                <div style="position: relative; width: 80%; height: 80%; margin: 5% auto; background-color: white;">
+                                    <button onclick="closePdf()" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 5px;">X</button>
+                                    <iframe id="pdfIframe" src="" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            
+                            <script>
+                            function openPdf() {
+                                var fileUrl = "https://drive.google.com/uc?export=view&id=17qBznFzJpcovti9bXiWqHpkD8E6yqXCH"; // Google Drive file ID
+                                var iframe = document.getElementById('pdfIframe');
+                                iframe.src = "https://docs.google.com/viewer?embedded=true&url=" + encodeURIComponent(fileUrl);
+                                document.getElementById('pdfModal').style.display = "block";
+                            }
+                            
+                            function closePdf() {
+                                document.getElementById('pdfModal').style.display = "none";
+                                document.getElementById('pdfIframe').src = ""; // Stop the PDF from loading when the modal is closed
+                            }
+                            </script>
+                            
+                            
+                            
                         </ul>
                     </div>
                 </div>
             </div>
     
             <!-- Card 2: Standar -->
-<div class="col-lg-6 col-md-6 mb-4">
-    <div class="card border-0 shadow-sm h-100">
-        <div class="card-body">
-            <h4 class="card-title text-secondary">
-                <i class="bi bi-file-earmark-code me-2 text-primary"></i>STANDAR
-            </h4>
-            <h6 class="text-primary fw-bold mt-3">Manual</h6>
-            <ul class="list-unstyled text-muted">
-                <li class="mb-2">
-                    <i class="bi bi-file-earmark-text text-primary"></i>
-                    <a href="/files/IALA_VTS_Manual.pdf" target="_blank" class="text-decoration-none text-muted">IALA VTS Manual</a>
-                </li>
-            </ul>
-            <h6 class="text-primary fw-bold mt-3">Operator, Supervisor & Instructor Competency</h6>
-            <ul class="list-unstyled text-muted">
-                <li class="mb-2">
-                    <i class="bi bi-file-earmark-text text-primary"></i>
-                    <a href="/files/IALA_Model_Course.pdf" target="_blank" class="text-decoration-none text-muted">IALA Model Course</a>
-                </li>
-                <li class="mb-2">
-                    <i class="bi bi-file-earmark-text text-primary"></i>
-                    <a href="/files/C0103-1.pdf" target="_blank" class="text-decoration-none text-muted">C0103-1 | VC0103-2 | C0103-3 | VC0103-4</a>
-                </li>
-            </ul>
-            <h6 class="text-primary fw-bold mt-3">SOP</h6>
-            <ul class="list-unstyled text-muted">
-                <li class="mb-2">
-                    <i class="bi bi-file-earmark-text text-primary"></i>
-                    <a href="/files/KP_DJPL_188-2022.pdf" target="_blank" class="text-decoration-none text-muted">KP DJPL 188-2022</a>
-                </li>
-            </ul>
-            <h6 class="text-primary fw-bold mt-3">Standard Maintenance</h6>
-            <ul class="list-unstyled text-muted">
-                <li class="mb-2">
-                    <i class="bi bi-file-earmark-text text-primary"></i>
-                    <a href="/files/KEPDIRJENLA_KP294-2020.pdf" target="_blank" class="text-decoration-none text-muted">
-                        KEPDIRJENLA KP.294/DJPL/2020 - 5 Mar 2020
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-secondary">
+                            <i class="bi bi-file-earmark-code me-2 text-primary"></i>STANDAR
+                        </h4>
+                        <h6 class="text-primary fw-bold mt-3">Manual</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2">
+                                <i class="bi bi-file-earmark-text text-primary"></i>
+                                <a href="dasarhukum/IALA-VTS-Manual-2021-Pages-Simple-1.pdf" onclick="openPdf()">IALA VTS Manual</a>
+                            </li>
+                        </ul>
+                        <h6 class="text-primary fw-bold mt-3">Operator, Supervisor & Instructor Competency</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-3">
+                                <p class="fw-bold mb-1">IALA Model Course</p>
+                            </li>
+                            <li class="mb-2">
+                                <a href="dasarhukum/IALA-Model-Course-V-103.1-VTS-Operator.pdf" onclick="openPdf()">
+                                    <i class="bi bi-file-earmark-text text-primary me-2"></i>
+                                    <span>C0103-1</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="dasarhukum/IALA-Model-Course-V-103.2-VTS-Supervisor.pdf" onclick="openPdf()">
+                                    <i class="bi bi-file-earmark-text text-primary me-2"></i>
+                                    <span>C0103-2</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="dasarhukum/IALA-Model-Course-V-103.3-VTS-On-the-Job-Training.pdf" onclick="openPdf()">
+                                    <i class="bi bi-file-earmark-text text-primary me-2"></i>
+                                    <span>C0103-3</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="dasarhukum/IALA-Model-Course-V-103.4-VTS-On-the-Job-Training-Instructor.pdf" onclick="openPdf()">
+                                    <i class="bi bi-file-earmark-text text-primary me-2"></i>
+                                    <span>C0103-4</span>
+                                </a>
+                            </li>
+                            
+                            
+                        </ul>
+                        <h6 class="text-primary fw-bold mt-3">SOP</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2">
+                                <i class="bi bi-file-earmark-text text-primary"></i>
+                                <a href="dasarhukum/KM 130-2020 Tata Cara Berlalulintas di Selat Sunda.pdf" onclick="openPdf()">KP DJPL 188-2022</a>
+                            </li>
+                        </ul>
+                        <h6 class="text-primary fw-bold mt-3">Standard Maintenance</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2">
+                                <i class="bi bi-file-earmark-text text-primary"></i>
+                                <a href="dasarhukum/JUKNIS_PERAWATAN_VTS_11-3-20.pdf" onclick="openPdf()">
+                                    KEPDIRJENLA KP.294/DJPL/2020 - 5 Mar 2020
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -283,6 +331,10 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+62 8111 00 11183 (DisNav Tipe B Tanjung Priok)</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
                                 <p class="mb-0">+62 821 1482 9973</p>
                             </div>
                             <div class="d-flex mt-4">
@@ -311,6 +363,7 @@
                             <div class="link-animated d-flex flex-column justify-content-start">
                                 <a class="text-light mb-2" href="tatacara.html"><i class="bi bi-arrow-right text-primary me-2"></i>Tata Cara Berlalu Lintas</a>
                                 <a class="text-light mb-2" href="syarat.html"><i class="bi bi-arrow-right text-primary me-2"></i>Layananan VTS</a>
+                                <a class="text-light mb-2" href="berita.html"><i class="bi bi-arrow-right text-primary me-2"></i>Berita</a>
                                 <a class="text-light mb-2" href="pnbp.html"><i class="bi bi-arrow-right text-primary me-2"></i>PNP Rambu</a>
                                 <a class="text-light mb-2" href="sop.html"><i class="bi bi-arrow-right text-primary me-2"></i>SOP</a>
                                 <a class="text-light" href="produk.html"><i class="bi bi-arrow-right text-primary me-2"></i>Produk</a>
